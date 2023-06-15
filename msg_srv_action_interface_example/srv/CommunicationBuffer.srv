@@ -1,0 +1,10 @@
+# Constants
+#* 상수는 필요할 때 따로 제작
+
+# Request
+int32[] from_buffer
+---
+# Response
+int32[] to_buffer
+int32   n_cars
+bool    is_completed

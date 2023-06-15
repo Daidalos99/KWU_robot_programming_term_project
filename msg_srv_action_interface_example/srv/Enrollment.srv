@@ -1,0 +1,3 @@
+int8 NONE = 0
+---
+int32 car_id

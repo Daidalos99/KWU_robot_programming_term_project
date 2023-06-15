@@ -1,0 +1,10 @@
+# Request
+int32 car_id
+
+---
+#Response
+int32[] car_ids
+float32[] car_times
+bool is_overflow
+bool is_duplicated
+bool is_exist_input_buffer

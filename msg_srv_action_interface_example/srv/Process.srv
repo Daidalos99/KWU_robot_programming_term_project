@@ -1,0 +1,8 @@
+#Request
+int8 PROCESSING = 0
+---
+int32[] exited_cars
+int32[] left_cars
+float32[] car_times
+bool out_flag
+
