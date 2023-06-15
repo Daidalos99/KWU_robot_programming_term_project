@@ -1,0 +1,24 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/heeyang/robot_ws/install/msg_srv_action_interface_example/include/**",
+        "/opt/ros/foxy/include/**",
+        "/home/heeyang/robot_ws/src/database_interface/include/**",
+        "/home/heeyang/robot_ws/src/msg_srv_action_interface_example/include/**",
+        "include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

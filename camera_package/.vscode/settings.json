@@ -1,0 +1,18 @@
+{
+  "python.autoComplete.extraPaths": [
+    "/home/heeyang/robot_ws/build/topic_service_action_rclpy_examples",
+    "/home/heeyang/robot_ws/install/topic_service_action_rclpy_examples/lib/python3.8/site-packages",
+    "/home/heeyang/robot_ws/build/my_first_ros_rclpy_pkg",
+    "/home/heeyang/robot_ws/install/my_first_ros_rclpy_pkg/lib/python3.8/site-packages",
+    "/home/heeyang/robot_ws/install/msg_srv_action_interface_example/lib/python3.8/site-packages",
+    "/opt/ros/foxy/lib/python3.8/site-packages"
+  ],
+  "python.analysis.extraPaths": [
+    "/home/heeyang/robot_ws/build/topic_service_action_rclpy_examples",
+    "/home/heeyang/robot_ws/install/topic_service_action_rclpy_examples/lib/python3.8/site-packages",
+    "/home/heeyang/robot_ws/build/my_first_ros_rclpy_pkg",
+    "/home/heeyang/robot_ws/install/my_first_ros_rclpy_pkg/lib/python3.8/site-packages",
+    "/home/heeyang/robot_ws/install/msg_srv_action_interface_example/lib/python3.8/site-packages",
+    "/opt/ros/foxy/lib/python3.8/site-packages"
+  ]
+}
