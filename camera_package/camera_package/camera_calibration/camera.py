@@ -4,7 +4,7 @@ import cv2
 
 # Load the ArUco marker dictionary.
 # arucoDict = cv2.aruco.Dictionary_get(cv2.aruco.DICT_4X4_50)
-dictionary = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_6X6_1000)
+dictionary = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_4X4_250)
 parameters =  cv2.aruco.DetectorParameters()
 detector = cv2.aruco.ArucoDetector(dictionary, parameters)
 
@@ -34,12 +34,12 @@ while True:
     print(flag)
     #! 초반에 아무것도 안들어가짐 -> loading중이라 그런듯
     if image is not None:
-        h,  w = image.shape[:2]
-        newcameramtx, roi = cv2.getOptimalNewCameraMatrix(mtx, dist, (w,h), 1, (w,h))
-        image = cv2.undistort(image, mtx, dist, None, newcameramtx)
-        x, y, w, h = roi
-        image = image[y:y+h, x:x+w]
-        # Convert the image to grayscale.
+        # h,  w = image.shape[:2]
+        # newcameramtx, roi = cv2.getOptimalNewCameraMatrix(mtx, dist, (w,h), 1, (w,h))
+        # image = cv2.undistort(image, mtx, dist, None, newcameramtx)
+        # x, y, w, h = roi
+        # image = image[y:y+h, x:x+w]
+        # # Convert the image to grayscale.
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
         if flag:

@@ -1,0 +1,4 @@
+/**: # namespace and node name
+  ros__parameters:
+    qos_depth: 10
+    size: 10

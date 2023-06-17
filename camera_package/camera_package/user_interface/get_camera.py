@@ -20,7 +20,7 @@ class UserCamera(Node):
         self.declare_parameter('capturing_time', 10.0)
         self.capturing_time = self.get_parameter('capturing_time').value
 
-        self.dictionary = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_6X6_1000)
+        self.dictionary = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_4X4_250)
         self.parameters =  cv2.aruco.DetectorParameters()
         self.detector = cv2.aruco.ArucoDetector(self.dictionary, self.parameters)
         self.mtx = np.array([[408.92439747   ,0.           ,315.34337658],
@@ -64,15 +64,17 @@ class UserCamera(Node):
                     cv2.aruco.drawDetectedMarkers(img, markerCorners, markerIds)
                     if len(markerIds) == 1:
                         break
-                cv2.imshow("Camera", img)
+                #! 이건 가시화 용으로
+                # cv2.imshow("Camera", img)
 
         #! self.cam.dispose()
-        try:
-            cv2.destroyWindow("Camera")
-        except cv2.error as e:
-            time.sleep(1)
-            print('cv.DestoryWindow Error (When camera is stopped, the error occurs.)')
-            return self.send_request()
+        # try:
+        #     pass
+        #     # cv2.destroyWindow("Camera")
+        # except cv2.error as e:
+        #     time.sleep(1)
+        #     print('cv.DestoryWindow Error (When camera is stopped, the error occurs.)')
+        #     return self.send_request()
 
         if(markerIds.shape[0] > 1):
             car_id = -1
@@ -80,6 +82,7 @@ class UserCamera(Node):
             car_id = int(markerIds[0].astype(np.int32))
         service_request = Append.Request()
         service_request.car_id = car_id
+        print(car_id)
         futures = self.camera_service_client.call_async(service_request)
         return futures
 
